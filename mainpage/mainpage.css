@@ -1,0 +1,182 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Kaushan Script', 'Franklin Gothic Medium', 'Arial Narrow';
+  height: 100%;
+  background: linear-gradient(to bottom right, rgb(235, 235, 251), rgb(250, 253, 255));
+}
+
+.site-name,
+.navigation {
+  padding-top: 8px;
+  padding-right: 5px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+
+}
+
+
+
+.site-name {
+  display: inline-block;
+
+}
+
+.site-name:hover {
+  text-shadow: 0px 0px 6px lightpink;
+  cursor: pointer;
+
+}
+
+.navigation {
+  display: inline-block;
+
+
+}
+
+.header {
+  display: flex;
+  background-color: #92d041;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+  /*position: fixed;*/
+  width: 100%;
+  z-index: 2;
+  top:0;
+  margin: 0;
+
+  
+  
+}
+
+
+
+.moomin-pic
+{
+  padding: 0;
+  margin: 0;
+
+  width: 100%;
+  height: 36%;
+
+  object-fit: cover;
+  position: static;
+
+  display: block;
+    
+ 
+}
+
+.heart-button {
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  border-color: transparent;
+}
+
+.heart-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(244, 194, 230);
+}
+
+.media-of-the-week
+{
+  background-color: #f5a7d5;
+  width: 255px;
+  height: 260px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.media-of-the-week-text
+{
+  color: rgb(255, 255, 255);
+  padding: 3px;
+  text-align: center;
+}
+
+.media-thumbnail
+{
+  width:100%;
+  
+}
+
+.media-name
+{
+   color:white;
+   padding-left: 2px;
+  
+   font-family:'Courier New', Courier, monospace;
+}
+
+.media-name:hover
+{
+  text-shadow: 0 0 5px #c5a7f5;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 50%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay ON top */
+  bottom: 0;
+  /* Stay at the top 0 , 1 for bottom  */
+  right: 0;
+  background-color:  #92d041; ;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f4dfe6;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
