@@ -1,0 +1,30 @@
+
+  .post 
+  {
+   margin: auto;
+  width: 80%;
+  border: hotpink solid;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.image-header {
+
+  width: 100%;
+  height: 200px;
+  opacity: 0.5;
+  object-fit: cover;
+  object-position: 0px 0px 200px 0px;
+  position: static;
+  
+
+}
+
+.blog-name {
+  position: absolute;
+  top: 90px;      /* adjust as needed */
+  left: 100px;     /* adjust as needed */
+  color: white;
+  font-size: 2em;
+  text-shadow: 0 0 8px #000; /* optional: makes text readable on image */
+}
