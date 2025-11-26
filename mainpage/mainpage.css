@@ -3,12 +3,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background: linear-gradient(to bottom right, rgb(235, 235, 251), rgba(255, 255, 255, 0.268));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {
   font-family: 'Kaushan Script', 'Franklin Gothic Medium', 'Arial Narrow';
   height: 100%;
-  background: linear-gradient(to bottom right, rgb(235, 235, 251), rgb(250, 253, 255));
+  background-color: transparent;
 }
 
 .site-name,
@@ -62,6 +65,8 @@ body {
   padding: 0;
   margin: 0;
 
+  z-index: 3;
+
   width: 100%;
   height: 20%;
 
@@ -85,9 +90,46 @@ body {
   box-shadow: 0 0 5px rgb(244, 194, 230);
 }
 
+.firstline
+{
+    display: flex;
+ 
+  justify-content: space-between;
+  align-items: center;
+  
+  overflow: scroll;
+  width: 100%;
+  
+  top:0;
+  margin: 0;
+}
+
+.generalblock{
+  display: inline-block;
+  vertical-align: top;
+  background-color: #f5a7d5;
+
+  
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+
+  height: 160px;
+  min-height: 160px;
+  max-height: 160px;
+
+    box-sizing: border-box;
+  overflow: hidden;  
+  
+
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 
-.media-of-the-week-text
+.generalblock-header
 {
   color: rgb(255, 255, 255);
   padding: 3px;
@@ -95,9 +137,42 @@ body {
 }
 
 .media-thumbnail
+{ 
+    max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.girl
 {
-  width:100%;
+  position: fixed;
+  width:25%;
+ 
   
+  margin: 0px;
+  bottom: 0;
+  right: 0;
+  
+}
+
+.walking-cat{
+  width: 32%;
+  display: inline-block;
+}
+.daisiesfooter
+{
+  display: block;
+    
+  margin-left: auto;
+  margin-right: auto;
+  width: 100% ;
+  
+}
+.strawberry-button
+{
+ width: 50px;
+ margin-top: 15px;
+ margin-left: 12px;
 }
 
 .media-name
@@ -113,22 +188,25 @@ body {
   text-shadow: 0 0 5px #c5a7f5;
 }
 
-.generalblock{
-  display: inline-block;
-  vertical-align: top;
 
-  background-color: #f5a7d5;
-  width: 255px;
-  height: 260px;
-  border-radius: 8px;
-  margin-top: 20px;
-  margin-left: 10px;
+
+.popup {
+  visibility: hidden;
+  /* other styles */
+}
+
+.popup.show {
+  visibility: visible;
+  /* maybe also add animation, position, etc. */
 }
 
 
 /* The side navigation menu */
 .sidenav {
-  height: 66%;
+  position: fixed;
+  top:170px;
+  
+   height: calc(100% - 66px); /* fills screen space below header */
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
@@ -136,7 +214,7 @@ body {
   /* Stay in place */
   z-index: 1;
   /* Stay ON top */
-  bottom: 0;
+  
   /* Stay at the top 0 , 1 for bottom  */
   right: 0;
   background-color:  #f9bddd; 
