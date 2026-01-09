@@ -1,3 +1,8 @@
+:root {
+  --header-h: 70px;
+  --image-h: 0px;
+}
+
 html,
 body {
   height: 100%;
@@ -12,6 +17,8 @@ body {
   font-family: 'Kaushan Script', 'Franklin Gothic Medium', 'Arial Narrow';
   height: 100%;
   background-color: transparent;
+  padding-top: calc(var(--image-h) + var(--header-h));
+  /* push page content below image + header */
 }
 
 .site-name,
@@ -48,34 +55,31 @@ body {
   justify-content: space-between;
   align-items: center;
   color: aliceblue;
-  /*position: fixed;*/
+  position: fixed;
+  /* pin header to top of viewport */
+  top: var(--image-h);
+  /* sit immediately under the image header */
+  left: 0;
   width: 100%;
-  z-index: 2;
-  top:0;
+  z-index: 1000;
   margin: 0;
-
-  
-  
 }
 
 
 
-.image-header
-{
+.image-header {
   padding: 0;
   margin: 0;
-
-  z-index: 3;
-
   width: 100%;
-  height: 20%;
-
   object-fit: cover;
-  position: static;
-
   display: block;
-    
- 
+  position: fixed;
+  /* keep the image at the top */
+  top: 0;
+  left: 0;
+  z-index: 800;
+  height: 15vh;
+  /* reduced to ~15% of the viewport height */
 }
 
 .heart-button {
@@ -90,26 +94,25 @@ body {
   box-shadow: 0 0 5px rgb(244, 194, 230);
 }
 
-.firstline
-{
-    display: flex;
- 
+.firstline {
+  display: flex;
+
   justify-content: space-between;
   align-items: center;
-  
+
   overflow: scroll;
   width: 100%;
-  
-  top:0;
+
+  top: 0;
   margin: 0;
 }
 
-.generalblock{
+.generalblock {
   display: inline-block;
   vertical-align: top;
   background-color: #f5a7d5;
 
-  
+
   width: 150px;
   min-width: 150px;
   max-width: 150px;
@@ -118,9 +121,9 @@ body {
   min-height: 160px;
   max-height: 160px;
 
-    box-sizing: border-box;
-  overflow: hidden;  
-  
+  box-sizing: border-box;
+  overflow: hidden;
+
 
   border-radius: 8px;
   margin-top: 20px;
@@ -129,62 +132,57 @@ body {
 }
 
 
-.generalblock-header
-{
+.generalblock-header {
   color: rgb(255, 255, 255);
   padding: 3px;
   text-align: center;
 }
 
-.media-thumbnail
-{ 
-    max-width: 100%;
+.media-thumbnail {
+  max-width: 100%;
   height: auto;
   display: block;
 }
 
-.girl
-{
+.girl {
   position: fixed;
-  width:25%;
- 
-  
+  width: 25%;
+
+
   margin: 0px;
   bottom: 0;
   right: 0;
-  
+
 }
 
-.walking-cat{
+.walking-cat {
   width: 32%;
   display: inline-block;
 }
-.daisiesfooter
-{
+
+.daisiesfooter {
   display: block;
-    
+
   margin-left: auto;
   margin-right: auto;
-  width: 100% ;
-  
-}
-.popup-button
-{
- width: 50px;
- margin-top: 15px;
- margin-left: 12px;
+  width: 100%;
+
 }
 
-.media-name
-{
-   color:white;
-   padding-left: 2px;
-  
-   font-family:'Courier New', Courier, monospace;
+.popup-button {
+  width: 50px;
+  margin-top: 15px;
+  margin-left: 12px;
 }
 
-.media-name:hover
-{
+.media-name {
+  color: white;
+  padding-left: 2px;
+
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.media-name:hover {
   text-shadow: 0 0 5px #c5a7f5;
 }
 
@@ -203,26 +201,21 @@ body {
 
 /* The side navigation menu */
 .sidenav {
-  position: fixed;
-  top:170px;
-  
-   height: calc(100% - 66px); /* fills screen space below header */
-  /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
   position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Stay ON top */
-  
-  /* Stay at the top 0 , 1 for bottom  */
+  /* pin to viewport */
+  z-index: 900;
+  /* below header */
+  top: calc(var(--image-h) + var(--header-h));
+  /* sit under image+header */
   right: 0;
-  background-color:  #f9bddd; 
-  /* Black*/
+  height: calc(100% - (var(--image-h) + var(--header-h)));
+  /* fill remaining viewport */
+  background-color: #f9bddd;
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
+  padding-top: 0;
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
 }

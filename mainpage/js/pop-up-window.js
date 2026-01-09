@@ -14,5 +14,3 @@ function KiwiFunction() {
   popup.classList.toggle("show");
 }
 
-
-
